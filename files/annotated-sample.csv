@@ -1,0 +1,9 @@
+text,id,sentiment,annotator,annotation_id,created_at,updated_at,lead_time
+7	Offers that rare combination of entertainment and education .,8,Positive,vbsowmya@gmail.com,7,2021-08-19T17:33:39.730388Z,2021-08-19T17:33:59.888029Z,299.235
+8	Perhaps no picture ever made has more literally showed that the road to hell is paved with good intentions .,9,Negative,vbsowmya@gmail.com,8,2021-08-19T17:34:06.727352Z,2021-08-19T17:34:06.727384Z,3.048
+6	The film provides some great insight into the neurotic mindset of all comics -- even those who have reached the absolute top of the game .,7,Negative,vbsowmya@gmail.com,6,2021-08-19T17:33:36.599154Z,2021-08-19T17:33:36.599199Z,2.468
+"5	Emerges as something rare , an issue movie that 's so honest and keenly observed that it does n't feel like one .",6,Negative,vbsowmya@gmail.com,5,2021-08-19T17:33:32.972034Z,2021-08-19T17:33:32.972085Z,11.045
+"4	If you sometimes like to go to the movies to have fun , Wasabi is a good place to start .",5,Positive,vbsowmya@gmail.com,4,2021-08-19T17:33:20.494404Z,2021-08-19T17:33:20.494436Z,5.703
+3	Effective but too-tepid biopic,4,Negative,vbsowmya@gmail.com,3,2021-08-19T17:33:13.627730Z,2021-08-19T17:33:13.627771Z,2.217
+2	The gorgeously elaborate continuation of `` The Lord of the Rings '' trilogy is so huge that a column of words can not adequately describe co-writer\/director Peter Jackson 's expanded vision of J.R.R. Tolkien 's Middle-earth .,3,Positive,vbsowmya@gmail.com,2,2021-08-19T17:33:10.195661Z,2021-08-19T17:33:10.195691Z,6.609
+"1	The Rock is destined to be the 21st Century 's new `` Conan '' and that he 's going to make a splash even greater than Arnold Schwarzenegger , Jean-Claud Van Damme or Steven Segal .",2,Positive,vbsowmya@gmail.com,1,2021-08-19T17:33:00.384392Z,2021-08-19T17:33:00.384435Z,40.257
