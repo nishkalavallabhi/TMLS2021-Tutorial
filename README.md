@@ -3,6 +3,8 @@
 This is the Github repository for the TMLS 2021 workshop session **"
 How to do NLP When You Don’t Have a Labeled Dataset?"**
 
+A version of this tutorial appeared earlier this year at ODSC-APAC 2021. 
+
 An overview on this topic can be found in the [ODSC blog, from August 2021](https://odsc.com/nlp-without-a-readymade-dataset/).  
 
 **Abstract:**  
@@ -12,7 +14,7 @@ Lack of a readily available dataset is a commonly seen scenario in industry proj
 **What is what in this repo:**
 - code/ has all the notebooks and python files required.
 - resources/ contains the word lists used in developing labeling functions  
-- slides/ contains the markdown and Rpres file for the slides, and they are published on Rpubs at: (https://rpubs.com/vbsowmya/odsc2021)[https://rpubs.com/vbsowmya/odsc2021]  
+- slides/ contains the markdown and Rpres file for the slides.
 - files/ contains the input/output files used in the code files.
 
 LICENSE:  CC0-1.0 License
