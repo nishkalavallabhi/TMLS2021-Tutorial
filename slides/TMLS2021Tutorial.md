@@ -265,6 +265,8 @@ How can this work in practice: Snorkel
 
 How do we write the labeling functions?
 ========================================================
+incremental: true
+
 - pattern matching
    - regular expressions
    - list of words or phrases
@@ -483,6 +485,13 @@ Labeling functions with Snorkel: How good are they
 - Conflicts: The fraction of the dataset where this LF and at least one other LF label and disagree
 
 (Clearly, these are not sufficient/good enough LFs, but I am still going ahead, as I am using this only as an illustration!)
+
+How many labeling functions?
+========================================================
+
+- as many as you can, such that:
+- no two functions overlap too much
+- together they should achieve maximum coverage of the unlabeled examples. 
 
 Learning a label model
 ========================================================
