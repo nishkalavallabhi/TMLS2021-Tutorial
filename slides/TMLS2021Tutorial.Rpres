@@ -1,11 +1,11 @@
 NLP without a readymade labeled dataset
 ========================================================
 author: Sowmya Vajjala
-date: 15th September 2021
+date: 15th November 2021
 autosize: true
 navigation: section
 
-Tutorial @ ODSC-APAC, 2021
+workshop @ Toronto Machine Learning Summit, 2021
 
 
 <style>
@@ -22,9 +22,11 @@ Tutorial Overview
 - A case study (with code examples)
 - Conclusion
 
-Code, slides: [https://github.com/nishkalavallabhi/ODSC-APAC-2021-Tutorial](https://github.com/nishkalavallabhi/ODSC-APAC-2021-Tutorial)
+Code, slides: [https://github.com/nishkalavallabhi/TMLS2021-Tutorial/](https://github.com/nishkalavallabhi/TMLS2021-Tutorial/)
 
-These slides: [https://rpubs.com/vbsowmya/odsc2021](https://rpubs.com/vbsowmya/odsc2021)
+These slides: [https://rpubs.com/vbsowmya/tmls2021](https://rpubs.com/vbsowmya/tmls2021)
+
+Note: This content is drawn from my ODSC-APAC tutorial 2 months ago.
 
 About Me
 ========================================================
@@ -82,20 +84,28 @@ incremental: true
  
 - So, good quality datasets are very (very) important for building any NLP system. 
 
-What kind of data do we really need for NLP?
+What kind of data do we really need for NLP? - 1
 ========================================================
 - Different kinds of NLP systems need different kinds of data. 
 
-- Sometimes, all we need are large collections of documents without any additional information 
+- Sometimes, all we need are large collections of documents without any additional information e.g.,
 
-- But in many cases, we need large collections of labeled data i.e., source -> target pairs. e.g.,
+  - building large pre-trained language models (e.g., BERT)
+  - topic models
+  - clustering
+  
+
+What kind of data do we really need for NLP? - 2
+========================================================
+But in many cases, we need large collections of labeled data i.e., source -> target pairs. e.g.,
+
     - sentence-translated sentence pairs (machine translation)
     - spam/non-spam emails (an example text classification)
     - question-answer pairs
     - sentence -> names of entities in it, relations between them etc (information extraction)
 
 
-What kind of data do we need? - 2
+What kind of data do we need? - 3
 ========================================================
    - Quantity: Typically, "learning" methods are data hungry. The more, the better, although it may plateau at some point. (What is large?)
    
@@ -104,8 +114,8 @@ What kind of data do we need? - 2
     - Data without ethics and privacy concerns such as using data without consent, keeping personally identifiable information, racial/gender bias in training examples etc. (Why is this important?)
    
     - Variety: e.g., legal domain docs for legal use cases) (Why?) 
-    
-    
+
+
 Collecting, Labeling, Augmenting datasets
 ========================================================
 type: section
@@ -251,6 +261,30 @@ How can this work in practice: Snorkel
 <img src="figures/3snorkelops.png" alt="weaksupervision" height="500" width="600"/>
 
 [Source](https://db.cs.washington.edu/events/workshop/2019/slides/alex-ratner.pdf)
+
+
+How do we write the labeling functions?
+========================================================
+- pattern matching
+   - regular expressions
+   - list of words or phrases
+   - ordered patterns (e.g., X followed by Y)
+   
+- A good labeling function should:
+  - realistically cover several examples in the dataset (at least 10%)
+  - have has high precision and good coverage.
+  
+(Some ideas by dataqa team - https://dataqa.ai/docs/rule_guide/classification_guide/)
+  
+How are such rules useful?
+========================================================
+incremental: true
+
+- We can create some "noisy" labeled data with rules.
+- We can use rules with imbalanced data, to increase labeled examples of a rare class.
+- if your data changes, or labeling guidelines changes, you can still use some of the previous rules without having to start from scratch.
+- Your rule based system is perhaps easily explainable. So, if it works with a decent precision, it can be a strong baseline. 
+
 
 Sounds good! Does it really work, though?
 ========================================================
@@ -432,6 +466,7 @@ How?:
 - learn a label model, from the output of such labeling functions (Snorkel's learner)
 - convert learnt label distribution into training data ready to be used by any ML/DL approach. 
 
+
 Labeling functions with Snorkel
 ========================================================
 ![weaks](figures/snorkel1.png)
@@ -521,7 +556,6 @@ Pros:
 Cons:
 - We have to develop the labeled functions, and it won't be easy unless we have clear knowledge about the problem.
 - This may not work very well for all kinds of NLP problems. 
-
 
 What if I just have my labeled training set?
 ========================================================
@@ -692,3 +726,10 @@ github repo: [https://github.com/nishkalavallabhi/ODSC-APAC-2021-Tutorial](https
 these slides: [https://rpubs.com/vbsowmya/odsc2021](https://rpubs.com/vbsowmya/odsc2021)
 
 my contact: firstname.lastname at nrc-cnrc dot gc dot ca
+
+References (TODO)
+========================================================
+- dataqa
+- snorkel
+- https://eugeneyan.com/writing/bootstrapping-data-labels/
+- transfer learning: https://huggingface.co/course/chapter3?fw=pt
