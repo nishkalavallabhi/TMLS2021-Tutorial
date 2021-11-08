@@ -17,17 +17,16 @@ workshop @ Toronto Machine Learning Summit, 2021
 Tutorial Overview
 ========================================================
 - NLP: Overview
-- Collecting, Labeling and Augmenting datasets
+- Collecting and Labeling data
+- Increasing labeled data: data augmentation
 - Modeling with small datasets - a few scenarios
+  - Automatically labeling data: weak supervision
+  - Transfer Learning
 - A case study (with code examples)
 - Conclusion
 
 Code, slides: [https://github.com/nishkalavallabhi/TMLS2021-Tutorial/](https://github.com/nishkalavallabhi/TMLS2021-Tutorial/)
-
-These slides: [https://rpubs.com/vbsowmya/tmls2021](https://rpubs.com/vbsowmya/tmls2021)
-
-Note: This content is drawn from my ODSC-APAC tutorial 2 months ago.
-
+  
 About Me
 ========================================================
 - Researcher at National Research Council, Canada
@@ -116,7 +115,16 @@ What kind of data do we need? - 3
     - Variety: e.g., legal domain docs for legal use cases) (Why?) 
 
 
-Collecting, Labeling, Augmenting datasets
+Typical "no data to start with" scenarios
+========================================================
+- a very company specific NLP problem (e.g., routing customer tickets automatically to different departments)
+- a common NLP problem, but for a specific domain (e.g., financial sentiment analysis)
+- building a common NLP system, but for a new language (e.g., a named entity recognizer for, say, French)
+- building a common NLP system, for a new, low resource language (e.g., machine translation for English to Ojibwe language)
+
+etc.  
+
+Collecting and Labeling datasets
 ========================================================
 type: section
     
@@ -176,9 +184,22 @@ Labeling data - conclusion
 - I just showed a simple example, but there are a whole lot of annotation support tools for NLP tasks.
 - [This listing by Doccano](https://github.com/doccano/awesome-annotation-tools) provides a comparison in terms of features, pricing, and the kind of NLP tasks that the tools support. 
 
-Creating more data: Data Augmentation 
+Increasing labeled data: Data Augmentation
 ========================================================
-Generate new data by modifying existing (labeled) data by:
+type: section
+
+Why? How small is a small dataset?
+========================================================
+   - depends on the task, language etc.
+   - sometimes, 1000 labeled examples is a lot. 
+   - sometimes, 50K labeled examples is not that much.
+   - for tasks like language modeling (read: GPT-3 and so on), no amount of data is "a lot", it looks like.
+
+Data Augmentation 
+========================================================
+Generate new data by slightly modifying existing (labeled) data.
+
+Some ways of doing this:
 - Replacing words with synonyms
 - Back translation 
 - Random insertion/deletion of words
@@ -225,13 +246,16 @@ Modeling with small datasets
 type: section
     
 
-Modeling with small(-er) datasets: challenges
+Modeling with small(-er) datasets
 ========================================================
-- We can't go too far with traditional ML/DL, with small datasets ...even after augmentation 
+Even data augmentation may not be enough to make a "large" dataset, sometimes.
 
-[http://ai.stanford.edu/blog/weak-supervision](source)
+[from stanford AI blog](http://ai.stanford.edu/blog/weak-supervision)
+
+
 
 ![methods](figures/methods.png)
+
 
 Weak supervision: an introduction
 ========================================================
@@ -314,7 +338,9 @@ Other methods: Semi-supervised Learning
 Other methods: Transfer Learning
 ========================================================
 ![transferlearning](figures/tl.png)
-[source - ruder.io](https://ruder.io/transfer-learning/)
+[source - ruder.io](https://ruder.io/transfer-learning/). 
+
+Note: Transfer can also be cross-lingual. 
 
 A scenario combining them all
 ========================================================
@@ -731,16 +757,11 @@ Thank you!
 
 I hope this tutorial gave you some overview of what to do when you encounter a new NLP task, without labeled data!
 
-
-github repo: [https://github.com/nishkalavallabhi/ODSC-APAC-2021-Tutorial](https://github.com/nishkalavallabhi/ODSC-APAC-2021-Tutorial)
-
-these slides: [https://rpubs.com/vbsowmya/odsc2021](https://rpubs.com/vbsowmya/odsc2021)
-
 my contact: firstname.lastname at nrc-cnrc dot gc dot ca
 
-References (TODO)
+Some useful references
 ========================================================
-- dataqa
-- snorkel
-- https://eugeneyan.com/writing/bootstrapping-data-labels/
-- transfer learning: https://huggingface.co/course/chapter3?fw=pt
+- [Eugene Yan's blog post on bootstrapping labeled data](https://eugeneyan.com/writing/bootstrapping-data-labels/)
+- [transfer learning lesson from huggingface]( https://huggingface.co/course/chapter3?fw=pt)
+- ["A Survey on Recent Approaches for Natural Language Processing in
+Low-Resource Scenarios"](https://aclanthology.org/2021.naacl-main.201.pdf)
