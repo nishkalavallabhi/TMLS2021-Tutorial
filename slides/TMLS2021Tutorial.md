@@ -14,7 +14,7 @@ workshop @ Toronto Machine Learning Summit, 2021
 }
 </style>
 
-Tutorial Overview
+Session Overview
 ========================================================
 - NLP: Overview
 - Collecting and Labeling data
@@ -38,6 +38,7 @@ About You
 - You know something about NLP
 - You perhaps already faced this issue with labeled datasets
 - You don't already know everything about addressing this issue :-)
+(Note: This is not for NLP experts :D )
 
 NLP: An Overview
 ========================================================
@@ -98,10 +99,10 @@ What kind of data do we really need for NLP? - 2
 ========================================================
 But in many cases, we need large collections of labeled data i.e., source -> target pairs. e.g.,
 
-    - sentence-translated sentence pairs (machine translation)
-    - spam/non-spam emails (an example text classification)
-    - question-answer pairs
-    - sentence -> names of entities in it, relations between them etc (information extraction)
+- sentence-translated sentence pairs (machine translation)
+- spam/non-spam emails (an example text classification)
+- question-answer pairs
+- sentence -> names of entities in it, relations between them etc (information extraction)
 
 
 What kind of data do we need? - 3
@@ -110,9 +111,9 @@ What kind of data do we need? - 3
    
     - Quality: Garbage in -> Garbage out. We can't take **anything** we can lay hands on. (Why?) 
    
-    - Data without ethics and privacy concerns such as using data without consent, keeping personally identifiable information, racial/gender bias in training examples etc. (Why is this important?)
+    - Data without ethics and privacy concerns e.g., not doing things like keeping personally identifiable information, racial/gender bias in training examples etc. (Why is this important?)
    
-    - Variety: e.g., legal domain docs for legal use cases) (Why?) 
+    - Variety: e.g., legal domain docs for legal use cases (Why?) 
 
 
 Typical "no data to start with" scenarios
@@ -377,6 +378,8 @@ Slowly, you built up a large collection of labeled or pseudo-labeled data:
 A case study
 ========================================================
 type: section
+
+(any questions before we proceed? )
 
 The Problem
 ========================================================
