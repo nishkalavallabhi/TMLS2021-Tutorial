@@ -107,13 +107,13 @@ But in many cases, we need large collections of labeled data i.e., source -> tar
 
 What kind of data do we need? - 3
 ========================================================
-   - Quantity: Typically, "learning" methods are data hungry. The more, the better, although it may plateau at some point. (What is large?)
+  - Quantity: Typically, "learning" methods are data hungry. The more, the better, although it may plateau at some point. (What is large?)
    
-    - Quality: Garbage in -> Garbage out. We can't take **anything** we can lay hands on. (Why?) 
+  - Quality: Garbage in -> Garbage out. We can't take **anything** we can lay hands on. (Why?) 
    
-    - Data without ethics and privacy concerns e.g., not doing things like keeping personally identifiable information, racial/gender bias in training examples etc. (Why is this important?)
+  - Data without ethics and privacy concerns e.g., not doing things like keeping personally identifiable information, racial/gender bias in training examples etc. (Why is this important?)
    
-    - Variety: e.g., legal domain docs for legal use cases (Why?) 
+  - Variety: e.g., legal domain docs for legal use cases (Why?) 
 
 
 Typical "no data to start with" scenarios
